@@ -23,7 +23,17 @@ Given an input image containing a motorcycle license plate, the goal is to:
 ## Pipeline
 
 The full pipeline consists of two major stages.
+<p align="center">
+  <img src="images/pipeline.png" alt="License Plate Recognition Pipeline" width="900"/>
+</p>
 
+**D\* (Align & Enhance) includes:**
+- Grayscale
+- Noise filtering (Bilateral)
+- Threshold (Otsu)
+- Edge detection (Canny)
+- Rotate (Hough Transform)
+- Crop the license plate
 ### 1. License Plate Detection
 
 The system uses **YOLOv8** to detect the bounding box of the license plate in the input image.
